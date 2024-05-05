@@ -104,9 +104,11 @@ fn main() {
         println!("Soros's computer howdy!");
         // Wait for our timer future to complete after two seconds.
         TimerFuture::new(Duration::new(2, 0)).await;
-        println!("Soros's computer done!");
+        println!("Soros's computer: done!");
     });
 
+
+    println!("Soros's computer: hey hey!");
     // Drop the spawner so that our executor knows it is finished and won't
     // receive more incoming tasks to run.
     drop(spawner);
